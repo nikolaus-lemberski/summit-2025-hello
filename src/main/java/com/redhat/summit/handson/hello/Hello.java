@@ -23,7 +23,7 @@ public class Hello {
     public String hello() {
         String encrypted_text = encryptDecrypt(helloText);
         String base64_encrypted_text = Base64.getEncoder().encodeToString(encrypted_text.getBytes());
-        return base64_encrypted_text.substring(0, 15);
+        return "The secret is: " + base64_encrypted_text.substring(0, 15);
     }
 
     private String encryptDecrypt(String input) {
